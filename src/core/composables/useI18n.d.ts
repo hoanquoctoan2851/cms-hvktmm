@@ -1,0 +1,1 @@
+export default function useI18n(): import("vue-i18n").Composer<import("vue-i18n").LocaleMessages<import("vue-i18n").VueMessageType> | undefined, import("vue-i18n").IntlDateTimeFormats | undefined, import("vue-i18n").IntlNumberFormats | undefined, import("vue-i18n").VueMessageType>;

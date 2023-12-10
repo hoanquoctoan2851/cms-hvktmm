@@ -1,0 +1,28 @@
+@import "../variable.scss";
+.ant-btn {
+  color: white !important;
+  font-weight: 700;
+  height: 48px;
+
+}
+.ant-btn-primary {
+  background: $primary-color;
+  &:hover {
+    background: $secondary-color !important;
+  }
+}
+
+.ant-btn-red, .ant-btn-dangerous, .btn-destructive {
+  background: $red-color;
+  &:hover {
+    background: $red-color-hover !important;
+  }
+}
+
+.ant-btn-green {
+  background: $green-color !important;
+  &:hover {
+    background: $green-color-hover !important;
+  }
+}
+

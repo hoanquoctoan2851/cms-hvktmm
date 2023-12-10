@@ -1,0 +1,15 @@
+import "@/models/Account";
+import "./Auth";
+import "./BankLoan";
+import "./CancelCourse";
+import "./ChangeCourse";
+import "./ConfirmStudying";
+import "./EnjoyPolicy";
+import "./LeaveAbsenceLess";
+import "./LeaveAbsenceMore";
+import "./LeavingSchool";
+import "./PaymentGraduationClass";
+import "./PaymentGraduationPerson";
+import "./RenewStudentCard";
+import "./ReservationAcademic";
+import "./ResolveWork";
