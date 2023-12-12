@@ -23,5 +23,13 @@
     "source.organizeImports": true
   },
   "css.customData": [".vscode/css_custom_data.json"],
-  "typescript.tsdk": "node_modules/typescript/lib"
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "i18n-ally.localesPaths": [
+    "src/localization/locales",
+    "templates/module/locales",
+    "src/modules/admin/locales",
+    "src/modules/auth/locales",
+    "src/modules/teacher/locales",
+    "src/modules/user/locales"
+  ]
 }

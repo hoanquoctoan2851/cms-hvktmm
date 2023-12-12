@@ -137,7 +137,7 @@
           Mã trường theo học (Mã theo quy định tuyển sinh): KMA
         </div>
         <div class="content-line mb-6">
-          Tên trường: Trường đại học công nghệ giao thông vận tải.
+          Tên trường: Đại học Bách Khoa Hà Nội.
         </div>
         <div class="content-line">
           <span class="label">Nghành học:</span>
@@ -177,7 +177,6 @@
                   required: true,
                   message: 'Vui lòng nhập khóa học',
                 },
-
               ]"
               :value-transformer="{
                 in: (value: any) => value ? [dayjs(value[0]), dayjs(value[1])] : value,
@@ -204,7 +203,11 @@
             <FormItem
               class="inline-flex px-2"
               name="class"
-              :rules="[{ required: true, message: 'Vui lòng nhập lớp' }, { min: 8, message: 'Lớp không đúng định dạng' }, { max: 8, message: 'Lớp không đúng định dạng' }]"
+              :rules="[
+                { required: true, message: 'Vui lòng nhập lớp' },
+                { min: 8, message: 'Lớp không đúng định dạng' },
+                { max: 8, message: 'Lớp không đúng định dạng' },
+              ]"
               input="a-input"
               :input-props="{
                 disabled: readOnly,
@@ -434,7 +437,10 @@
               />
             </FormItem>
           </a-space>
-          <div v-if="['success', 'approved'].includes(initialValues?.status)" class="w-full flex justify-end">
+          <div
+            v-if="['success', 'approved'].includes(initialValues?.status)"
+            class="w-full flex justify-end"
+          >
             <Signature></Signature>
           </div>
         </div>
@@ -448,6 +454,7 @@ import Form from "@/components/Form.vue";
 import FormItem from "@/components/FormItem.vue";
 import InputTextNumber from "@/components/InputTextNumber.vue";
 import LetterWrap from "@/components/LetterWrap.vue";
+import Signature from "@/components/Signature.vue";
 import {
   Bank,
   Genders,
@@ -456,11 +463,9 @@ import {
   TuitionType,
 } from "@/constants/Options";
 import { validateCitizenId, validatePhone } from "@/hooks/validate";
-import { BankLoanRequest } from "@/models/BankLoan";
 import { FormExposed } from "@/models/Form";
 import dayjs from "dayjs";
 import { computed, ref } from "vue";
-import Signature from "@/components/Signature.vue";
 
 const props = withDefaults(
   defineProps<{

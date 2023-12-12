@@ -72,7 +72,7 @@
         <div class="content-line mb-4">
           <a-space :align="'baseline'" class="mr-6">
             <span class="label">Trường:</span>
-            <span class="font-semibold">Trường đại học công nghệ giao thông vận tải</span>
+            <span class="font-semibold">Đại học Bách Khoa Hà Nội</span>
           </a-space>
         </div>
         <div class="content-line">
@@ -135,7 +135,11 @@
             <span class="label">Lớp: </span>
             <FormItem
               name="class"
-              :rules="[{ required: true, message: 'Vui lòng nhập lớp' }, { min: 8, message: 'Lớp không đúng định dạng' }, { max: 8, message: 'Lớp không đúng định dạng' }]"
+              :rules="[
+                { required: true, message: 'Vui lòng nhập lớp' },
+                { min: 8, message: 'Lớp không đúng định dạng' },
+                { max: 8, message: 'Lớp không đúng định dạng' },
+              ]"
               input="a-input"
               :input-props="{ disabled: readOnly }"
             />
@@ -250,7 +254,10 @@
           />
           <span>theo quy định và chế độ hiện hành./.</span>
         </div>
-        <div v-if="['success', 'approved'].includes(initialValues?.status)" class="w-full flex justify-end">
+        <div
+          v-if="['success', 'approved'].includes(initialValues?.status)"
+          class="w-full flex justify-end"
+        >
           <Signature></Signature>
         </div>
       </Form>
@@ -262,12 +269,12 @@
 import Form from "@/components/Form.vue";
 import FormItem from "@/components/FormItem.vue";
 import LetterWrap from "@/components/LetterWrap.vue";
+import Signature from "@/components/Signature.vue";
 import { Majors } from "@/constants/Options";
 import { EnjoyPolicyRequest } from "@/models/EnjoyPolicy";
 import { FormExposed } from "@/models/Form";
 import dayjs from "dayjs";
 import { computed, ref } from "vue";
-import Signature from "@/components/Signature.vue";
 
 const props = withDefaults(
   defineProps<{

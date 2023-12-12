@@ -3,7 +3,7 @@
     <div class="title mb-[32]">
       <h3 class="uppercase mb-2 font-semibold">Giấy xác nhận</h3>
       <h4 class="mb-2 font-semibold text-center">
-        Trường đại học công nghệ giao thông vận tải xác nhận:
+        Đại học Bách Khoa Hà Nội xác nhận:
       </h4>
     </div>
     <div>
@@ -175,7 +175,7 @@
           </div>
         </div>
         <div class="content-line mb-2">
-          <div>Hiện đang theo học tại Trường đại học công nghệ giao thông vận tải:</div>
+          <div>Hiện đang theo học tại Đại học Bách Khoa Hà Nội:</div>
         </div>
         <div class="content-line">
           <a-space :size="4" class="mr-8">
@@ -326,7 +326,10 @@
             buôn lậu…….
           </div>
         </div>
-        <div v-if="['success', 'approved'].includes(initialValues?.status)" class="w-full flex justify-end">
+        <div
+          v-if="['success', 'approved'].includes(initialValues?.status)"
+          class="w-full flex justify-end"
+        >
           <Signature></Signature>
         </div>
       </Form>
@@ -339,6 +342,7 @@ import Form from "@/components/Form.vue";
 import FormItem from "@/components/FormItem.vue";
 import InputTextNumber from "@/components/InputTextNumber.vue";
 import LetterWrap from "@/components/LetterWrap.vue";
+import Signature from "@/components/Signature.vue";
 import { Genders, Majors } from "@/constants/Options";
 import { validateCitizenId } from "@/hooks/validate";
 import { ConfirmStudyingRequest } from "@/models/ConfirmStudying";
@@ -346,7 +350,6 @@ import { FormExposed } from "@/models/Form";
 import { Rule } from "ant-design-vue/lib/form/interface";
 import dayjs from "dayjs";
 import { computed, ref } from "vue";
-import Signature from "@/components/Signature.vue";
 
 const props = withDefaults(
   defineProps<{
